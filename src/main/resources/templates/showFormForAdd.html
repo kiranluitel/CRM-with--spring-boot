@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" th:href="@{/css/demo.css}" />
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<head>
+</head>
+<body>
+	
+			
+		
+	
+	<div class="container">
+		<p class="h2 mb-3 mu-3">CRM - Customer Relationship Manager</p>
+		<hr>
+		
+		
+			
+			
+		<p class="h4 mb-4">Give the Customer Information</p>
+		<form action="#" th:action ="@{/customers/saveCustomer}" th:object= "${customer}" method="POST" >
+		
+			
+			
+						<input type="hidden" th:field="*{id}" />
+						<input type="text" th:field="*{firstName}"
+							placeholder="First Name" class="form-control mb-4 col-4"/>
+							
+						<input type="text" th:field="*{lastName}" 
+							placeholder="Last Name" class="form-control mb-4 col-4"/>
+							
+						<input type="text" th:field="*{email}"
+							placeholder="Email" class="form-control mb-4 col-4"/>
+							
+						<input type="Submit" value="Save" class="btn btn-info col-2"/>
+					</form>
+					<hr>
+					<a th:href="@{/customers/list}"> Back To List</a>
+					
+		
+				</div>
+			
+					
+				
+
+</body>
+
+
+</html>
